@@ -88,56 +88,68 @@
       border-radius: 2px;
     }
 
-    /* Form styles */
-    .form-row {
-      display: flex;
-      gap: 8px;
-      align-items: stretch;
-      width: 100%;
+    /* MailerLite overrides */
+    #mlb2-37990743.ml-form-embedContainer { display: block; width: 100% !important; }
+    #mlb2-37990743 .ml-form-embedWrapper { background: transparent !important; border: none !important; width: 100% !important; }
+    #mlb2-37990743 .ml-form-embedBody { padding: 0 !important; }
+    #mlb2-37990743 .ml-form-embedContent { display: none !important; }
+    #mlb2-37990743 .ml-form-formContent.horozintalForm { padding: 0 !important; margin: 0 !important; }
+    #mlb2-37990743 .ml-form-horizontalRow { display: flex !important; gap: 8px !important; align-items: stretch !important; height: auto !important; }
+    #mlb2-37990743 .ml-input-horizontal { flex: 1 !important; width: auto !important; float: none !important; }
+    #mlb2-37990743 .ml-input-horizontal .horizontal-fields { padding-right: 0 !important; }
+    #mlb2-37990743 .ml-button-horizontal { width: auto !important; float: none !important; flex-shrink: 0 !important; }
+    #mlb2-37990743 .ml-form-horizontalRow input[type="email"] {
+      background: #0E1318 !important;
+      border: 1px solid rgba(3,136,215,0.3) !important;
+      border-radius: 8px !important;
+      color: #F0F4F8 !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 16px !important;
+      padding: 14px 16px !important;
+      height: 52px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
     }
-    .form-row input[type="email"] {
-      flex: 1;
-      background: #0E1318;
-      border: 1px solid rgba(3,136,215,0.3);
-      border-radius: 8px;
-      color: #F0F4F8;
-      font-family: 'Poppins', sans-serif;
-      font-size: 16px;
-      padding: 14px 16px;
-      height: 52px;
-      box-sizing: border-box;
-      outline: none;
+    #mlb2-37990743 .ml-form-horizontalRow input[type="email"]::placeholder { color: #7A8A99 !important; }
+    #mlb2-37990743 .ml-form-horizontalRow button.primary {
+      background-color: #0388D7 !important;
+      border: none !important;
+      border-radius: 8px !important;
+      color: #fff !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      padding: 0 24px !important;
+      height: 52px !important;
+      width: auto !important;
+      white-space: nowrap !important;
+      cursor: pointer !important;
     }
-    .form-row input[type="email"]::placeholder { color: #7A8A99; }
-    .form-row input[type="email"]:focus {
-      border-color: rgba(3,136,215,0.6);
+    #mlb2-37990743 .ml-form-successBody { padding: 0 !important; }
+    #mlb2-37990743 .ml-form-successContent {
+      background: rgba(3,136,215,0.1) !important;
+      border: 1px solid rgba(3,136,215,0.3) !important;
+      border-radius: 12px !important;
+      padding: 32px 24px !important;
+      margin-top: 8px !important;
+      text-align: center !important;
     }
-    .form-row button {
-      background-color: #0388D7;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      padding: 0 24px;
-      height: 52px;
-      white-space: nowrap;
-      cursor: pointer;
-      flex-shrink: 0;
+    #mlb2-37990743 .ml-form-successContent h4 {
+      color: #ffffff !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 22px !important;
+      font-weight: 700 !important;
+      margin-bottom: 10px !important;
     }
-    .form-row button:hover { background-color: #0270b5; }
-    .form-success {
-      display: none;
-      background: rgba(3,136,215,0.1);
-      border: 1px solid rgba(3,136,215,0.3);
-      border-radius: 12px;
-      padding: 32px 24px;
-      margin-top: 8px;
+    #mlb2-37990743 .ml-form-successContent p {
+      color: #7A8A99 !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 300 !important;
+      line-height: 1.6 !important;
     }
-    .form-success .check-icon { font-size: 40px; margin-bottom: 12px; color: #0388D7; }
-    .form-success h4 { color: #ffffff; font-size: 22px; font-weight: 700; margin-bottom: 10px; }
-    .form-success p { color: #7A8A99; font-size: 15px; font-weight: 300; line-height: 1.6; }
+    .ml-mobileButton-horizontal { display: none !important; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 
     /* Features section */
     .features {
@@ -164,8 +176,9 @@
     @media (max-width: 600px) {
       body { padding: 40px 16px; }
       .features { padding-top: 32px; }
-      .form-row { flex-direction: column; }
-      .form-row button { width: 100%; }
+      #mlb2-37990743 .ml-form-horizontalRow { flex-direction: column !important; gap: 12px !important; }
+      #mlb2-37990743 .ml-button-horizontal { width: 100% !important; }
+      #mlb2-37990743 .ml-form-horizontalRow button.primary { width: 100% !important; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -192,17 +205,55 @@
     <div class="divider"></div>
     <p class="sub">Cada semana: un análisis de lo que funciona en <strong style="color:#fff;font-weight:700;">YouTube</strong> para <strong style="color:#fff;font-weight:600;">conseguir clientes</strong> con tu negocio.</p>
 
-    <div id="signup-form">
-      <div class="form-row">
-        <input type="email" id="email-input" placeholder="Tu email" autocomplete="email">
-        <button onclick="subscribeUser()">Suscríbete</button>
-      </div>
-      <div class="form-success" id="form-success">
-        <div class="check-icon">✓</div>
-        <h4>¡Ya estás dentro!</h4>
-        <p>Revisa tu email para confirmar la suscripción.<br>Te aviso cuando el canal esté listo.</p>
+    <div id="mlb2-37990743" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-37990743">
+      <div class="ml-form-align-center">
+        <div class="ml-form-embedWrapper embedForm">
+          <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1906962/forms/181024877610796688/subscribe" data-code="" method="post" target="_blank">
+              <div class="ml-form-formContent horozintalForm">
+                <div class="ml-form-horizontalRow">
+                  <div class="ml-input-horizontal">
+                    <div style="width:100%;" class="horizontal-fields">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Tu email" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ml-button-horizontal primary">
+                    <button type="submit" class="primary">Suscríbete</button>
+                    <button disabled="disabled" style="display:none;" type="button" class="loading">
+                      <div class="ml-form-embedSubmitLoad"></div>
+                      <span class="sr-only">Loading...</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" name="ml-submit" value="1">
+              <div class="ml-mobileButton-horizontal">
+                <button type="submit" class="primary">Suscríbete</button>
+              </div>
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
+          </div>
+          <div class="ml-form-successBody row-success" style="display:none">
+            <div class="ml-form-successContent">
+              <h4>¡Ya estás dentro!</h4>
+              <p>Te avisaré cuando el canal esté listo. Mientras tanto, revisa tu email para confirmar la suscripción.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <script>
+      function ml_webform_success_37990743() {
+        var $ = ml_jQuery || jQuery;
+        $('.ml-subscribe-form-37990743 .row-success').show();
+        $('.ml-subscribe-form-37990743 .row-form').hide();
+      }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+    <script>fetch("https://assets.mailerlite.com/jsonp/1906962/forms/181024877610796688/takel")</script>
   </div>
 
   <div class="features">
@@ -224,35 +275,6 @@
     </div>
     <p class="features-cta">Si tienes un negocio y quieres que YouTube trabaje para ti, esto es para ti.</p>
   </div>
-
-  <script>
-    async function subscribeUser() {
-      const email = document.getElementById('email-input').value;
-      if (!email || !email.includes('@')) {
-        alert('Por favor introduce un email válido');
-        return;
-      }
-      const formData = new FormData();
-      formData.append('fields[email]', email);
-      formData.append('ml-submit', '1');
-      formData.append('anticsrf', 'true');
-      try {
-        await fetch('https://assets.mailerlite.com/jsonp/1906962/forms/181024877610796688/subscribe', {
-          method: 'POST',
-          body: formData,
-          mode: 'no-cors'
-        });
-        document.querySelector('.form-row').style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
-      } catch(e) {
-        alert('Error al suscribirse. Inténtalo de nuevo.');
-      }
-    }
-
-    document.getElementById('email-input').addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') subscribeUser();
-    });
-  </script>
 
 </body>
 </html>
