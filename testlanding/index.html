@@ -289,52 +289,43 @@
     .steps-list {
       display: flex;
       flex-direction: column;
-      gap: 0;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
+      gap: 32px;
     }
 
     .hiw-item {
       display: flex;
       align-items: flex-start;
-      gap: 20px;
-      padding: 28px 32px;
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border);
-      transition: background 0.2s;
+      gap: 16px;
+      text-align: left;
     }
-    .hiw-item:last-child { border-bottom: none; }
-    .hiw-item:hover { background: var(--bg-card2); }
 
     .hiw-number {
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      background: var(--blue-mid);
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
       font-weight: 800;
-      font-size: 15px;
+      font-size: 32px;
       color: var(--blue);
       flex-shrink: 0;
-      margin-top: 2px;
+      line-height: 1.1;
+      min-width: 40px;
     }
 
     .hiw-content {
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      text-align: left;
+      gap: 8px;
     }
 
     .hiw-title {
-      font-size: 16px;
+      font-size: 32px;
       font-weight: 700;
-      color: var(--white);
+      color: var(--blue);
+      line-height: 1.2;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 2px;
     }
 
     .hiw-desc {
-      font-size: 14px;
+      font-size: 23px;
       color: var(--text-muted);
       font-weight: 300;
       line-height: 1.6;
@@ -547,38 +538,38 @@
 
   <!-- CÓMO FUNCIONA -->
   <div class="how-it-works">
-    <p class="section-label"><span>Cómo</span> funciona:</p>
+    <p class="section-label"><span>Cómo</span> Funciona:</p>
 
     <div class="steps-list">
 
       <div class="hiw-item">
-        <div class="hiw-number">1</div>
+        <div class="hiw-number">1.</div>
         <div class="hiw-content">
-          <div class="hiw-title">Reserva tu sesión</div>
+          <div class="hiw-title">Reserva tu Sesión</div>
           <div class="hiw-desc">Elige el horario que mejor te venga usando el calendario de arriba.</div>
         </div>
       </div>
 
       <div class="hiw-item">
-        <div class="hiw-number">2</div>
+        <div class="hiw-number">2.</div>
         <div class="hiw-content">
-          <div class="hiw-title">Rellena un formulario rápido</div>
+          <div class="hiw-title">Rellena un Formulario Rápido</div>
           <div class="hiw-desc">Comparte el enlace a tu canal, tus objetivos y en qué quieres centrarte. Así llego preparado y aprovechamos cada minuto.</div>
         </div>
       </div>
 
       <div class="hiw-item">
-        <div class="hiw-number">3</div>
+        <div class="hiw-number">3.</div>
         <div class="hiw-content">
-          <div class="hiw-title">Nos reunimos por Zoom (30 minutos)</div>
+          <div class="hiw-title">Nos Reunimos por Zoom (30 Minutos)</div>
           <div class="hiw-desc">Analizamos tu canal, revisamos tu estrategia e identificamos los cambios que más impacto van a tener en tu conversión.</div>
         </div>
       </div>
 
       <div class="hiw-item">
-        <div class="hiw-number">4</div>
+        <div class="hiw-number">4.</div>
         <div class="hiw-content">
-          <div class="hiw-title">Recibes la grabación y las conclusiones</div>
+          <div class="hiw-title">Recibes la Grabación y las Conclusiones</div>
           <div class="hiw-desc">Te envío la grabación de la sesión y un resumen de los puntos clave para que puedas actuar de inmediato.</div>
         </div>
       </div>
