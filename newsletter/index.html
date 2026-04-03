@@ -31,43 +31,14 @@
       background: radial-gradient(ellipse at center, rgba(3,136,215,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
-    .container {
-      position: relative;
-      z-index: 1;
-     max-width: 520px;
-      width: 100%;
-    }
-    @media (max-width: 600px) {
-      body { padding: 40px 16px; }
-      .features { padding-top: 32px; }
-      .feature-list { grid-template-columns: 1fr; gap: 12px; }
-      #mlb2-37990743 .ml-form-horizontalRow { flex-direction: column !important; gap: 12px !important; }
-      #mlb2-37990743 .ml-input-horizontal,
-      #mlb2-37990743 .ml-button-horizontal { width: 100% !important; flex: none !important; }
-      #mlb2-37990743 .ml-button-horizontal button,
-      #mlb2-37990743 .ml-button-horizontal button.primary,
-      #mlb2-37990743 .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
-        width: 100% !important;
-        padding: 14px 24px !important;
-        box-sizing: border-box !important;
-      }
-    }
     .logo {
-  margin-bottom: 30px;
-}
-.logo img {
-  width: 200px;
-  max-width: 100%;
-  height: auto;
-}
-   @media (max-width: 768px) {
-  .logo img {
-    width: 40%;
-  }
-      .logo {
-    margin-bottom: 24px;
-  }
-}
+      margin-bottom: 30px;
+    }
+    .logo img {
+      width: 200px;
+      max-width: 100%;
+      height: auto;
+    }
     .badge {
       display: inline-flex;
       align-items: center;
@@ -90,15 +61,24 @@
       background: #0388D7;
       box-shadow: 0 0 8px #0388D7;
     }
-h1 {
-  font-size: clamp(28px, 5vw, 44px);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  margin-bottom: 16px;
- 
-}
+    h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 24px;
+    }
     h1 span { color: #0388D7; }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+      width: 100%;
+    }
     p.sub {
       font-size: 18px;
       color: #7A8A99;
@@ -113,7 +93,6 @@ h1 {
       margin: 0 auto 40px;
       border-radius: 2px;
     }
-    .ml-embedded { margin: 0 auto; }
     .back {
       margin-top: 32px;
       font-size: 14px;
@@ -182,8 +161,6 @@ h1 {
       width: 100%;
       max-width: 720px;
     }
-
-}
     .features h2 {
       font-size: 22px;
       font-weight: 700;
@@ -233,6 +210,25 @@ h1 {
       line-height: 1.6;
       font-style: italic;
     }
+
+    @media (max-width: 768px) {
+      .logo img { width: 40%; }
+      .logo { margin-bottom: 24px; }
+    }
+    @media (max-width: 600px) {
+      body { padding: 40px 16px; }
+      .features { padding-top: 32px; }
+      #mlb2-37990743 .ml-form-horizontalRow { flex-direction: column !important; gap: 12px !important; }
+      #mlb2-37990743 .ml-input-horizontal,
+      #mlb2-37990743 .ml-button-horizontal { width: 100% !important; flex: none !important; }
+      #mlb2-37990743 .ml-button-horizontal button,
+      #mlb2-37990743 .ml-button-horizontal button.primary,
+      #mlb2-37990743 .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+        width: 100% !important;
+        padding: 14px 24px !important;
+        box-sizing: border-box !important;
+      }
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRB9MC32JF"></script>
@@ -245,14 +241,16 @@ h1 {
 </head>
 <body>
   <div class="ambient"></div>
+
+  <div class="logo">
+    <img src="/newsletter/logo.png" alt="xavi gómez">
+  </div>
+
+  <div class="badge">Newsletter semanal</div>
+
+  <h1>¿Por qué tu canal de YouTube<br>atrae <span>turistas</span> y no <span>clientes?</span></h1>
+
   <div class="container">
-
-    <div class="logo">
-      <img src="/newsletter/logo.png" alt="xavi gómez">
-    </div>
-
-    <div class="badge">Newsletter semanal</div>
-    <h1>¿Por qué tu canal de YouTube<br>atrae <span>turistas</span> y no <span>clientes?</span></h1>
     <div class="divider"></div>
     <p class="sub">Cada semana: un análisis de lo que funciona en <strong style="color:#fff;font-weight:700;">YouTube</strong> para <strong style="color:#fff;font-weight:600;">conseguir clientes</strong> con tu negocio.</p>
 
@@ -306,7 +304,6 @@ h1 {
     </script>
     <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
     <script>fetch("https://assets.mailerlite.com/jsonp/1906962/forms/181024877610796688/takel")</script>
-
   </div>
 
   <div class="features">
