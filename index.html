@@ -19,10 +19,23 @@
       text-align: center;
       padding: 24px;
     }
-    .container {
-      max-width: 560px;
+    .container { max-width: 560px; }
+    .logo { margin-bottom: 48px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(3,136,215,0.08);
+      border: 1px solid rgba(3,136,215,0.2);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #0388D7;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
     }
-    
     .badge::before {
       content: '';
       width: 6px; height: 6px;
@@ -52,10 +65,7 @@
       margin: 0 auto 40px;
       border-radius: 2px;
     }
-    .contact {
-      font-size: 14px;
-      color: #7A8A99;
-    }
+    .contact { font-size: 14px; color: #7A8A99; }
     .contact a {
       color: #0388D7;
       text-decoration: none;
@@ -67,27 +77,37 @@
 </head>
 <body>
   <div class="container">
+
     <div class="logo">
-  <svg viewBox="0 0 320 50" height="36" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');</style>
-    </defs>
-    <text y="38" font-family="'Poppins', sans-serif" font-size="42" font-weight="300">
-      <tspan fill="#0388d7">xavi </tspan><tspan fill="#ffffff">g&#243;mez</tspan><tspan fill="#0388d7">.</tspan>
-    </text>
-  </svg>
-</div>
+      <svg viewBox="0 0 420 56" height="40" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');</style>
+        </defs>
+        <text y="42" font-family="'Poppins', sans-serif" font-size="40" font-weight="300">
+          <tspan fill="#0388d7">xavi </tspan><tspan fill="#ffffff">gómez</tspan><tspan fill="#0388d7">.</tspan>
+        </text>
+      </svg>
+    </div>
+
     <div class="badge">Próximamente</div>
     <h1>Algo está<br><span>en camino.</span></h1>
     <div class="divider"></div>
     <p>Estamos preparando algo para ayudarte a convertir las visitas de tu canal en clientes reales.</p>
     <div class="ml-embedded" data-form="uTGSRl"></div>
     <div class="contact">
-      ¿Preguntas? <a href="/cdn-cgi/l/email-protection#d4b7bbbaa0b5b7a0bb94a2bdb1a3b1a6a0bbb7b8bdb1baa0fab7bbb9"><span class="__cf_email__" data-cfemail="01626e6f756062756e41776864766473756e626d68646f752f626e6c">[email&#160;protected]</span></a>
+      ¿Preguntas? <a href="mailto:contacto@viewertoclient.com">contacto@viewertoclient.com</a>
     </div>
+
   </div>
 
   <!-- MailerLite Universal -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1906962');
+  </script>
+
+</body>
+</html>
