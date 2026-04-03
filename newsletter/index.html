@@ -111,7 +111,8 @@
       box-sizing: border-box !important;
     }
     #mlb2-37990743 .ml-form-horizontalRow input[type="email"]::placeholder { color: #7A8A99 !important; }
-    #mlb2-37990743 .ml-form-horizontalRow button.primary {
+    #mlb2-37990743 .ml-form-horizontalRow button.primary,
+    #mlb2-37990743 .ml-mobileButton-horizontal button {
       background-color: #0388D7 !important;
       border: none !important;
       border-radius: 8px !important;
@@ -121,25 +122,10 @@
       font-weight: 700 !important;
       padding: 0 24px !important;
       height: 52px !important;
-      width: auto !important;
-      white-space: nowrap !important;
       cursor: pointer !important;
+      white-space: nowrap !important;
     }
-
-    #mlb2-37990743 .ml-form-horizontalRow button,
-#mlb2-37990743 .ml-form-horizontalRow button.primary,
-#mlb2-37990743 .ml-mobileButton-horizontal button {
-  background-color: #0388D7 !important;
-  border: none !important;
-  border-radius: 8px !important;
-  color: #fff !important;
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 18px !important;
-  font-weight: 700 !important;
-  padding: 14px 24px !important;
-  width: 100% !important;
-  cursor: pointer !important;
-}
+    .ml-mobileButton-horizontal { display: none !important; }
     #mlb2-37990743 .ml-form-successBody { padding: 0 !important; }
     #mlb2-37990743 .ml-form-successContent {
       background: rgba(3,136,215,0.1) !important;
@@ -149,6 +135,13 @@
       margin-top: 8px !important;
       text-align: center !important;
     }
+    #mlb2-37990743 .ml-form-successContent h4::before {
+      content: '✓';
+      display: block;
+      font-size: 30px;
+      color: #0388D7;
+      margin-bottom: 12px;
+    }
     #mlb2-37990743 .ml-form-successContent h4 {
       color: #ffffff !important;
       font-family: 'Poppins', sans-serif !important;
@@ -156,13 +149,6 @@
       font-weight: 700 !important;
       margin-bottom: 10px !important;
     }
-    #mlb2-37990743 .ml-form-successContent h4::before {
-  content: '✓';
-  display: block;
-  font-size: 30px;
-  color: #0388D7;
-  margin-bottom: 12px;
-}
     #mlb2-37990743 .ml-form-successContent p {
       color: #7A8A99 !important;
       font-family: 'Poppins', sans-serif !important;
@@ -170,7 +156,6 @@
       font-weight: 300 !important;
       line-height: 1.6 !important;
     }
-    
     .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 
     /* Features section */
@@ -199,8 +184,13 @@
       body { padding: 40px 16px; }
       .features { padding-top: 32px; }
       #mlb2-37990743 .ml-form-horizontalRow { flex-direction: column !important; gap: 12px !important; }
-      #mlb2-37990743 .ml-button-horizontal { width: 100% !important; }
-      #mlb2-37990743 .ml-form-horizontalRow button.primary { width: 100% !important; }
+      #mlb2-37990743 .ml-button-horizontal { display: none !important; }
+      .ml-mobileButton-horizontal { display: block !important; width: 100% !important; }
+      #mlb2-37990743 .ml-mobileButton-horizontal button {
+        width: 100% !important;
+        height: 52px !important;
+        padding: 0 24px !important;
+      }
     }
   </style>
   <!-- Google tag (gtag.js) -->
