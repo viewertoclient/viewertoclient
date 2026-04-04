@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
-  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     :root {
       --blue: #0388D7;
@@ -299,6 +298,26 @@
     .col-card .hiw-desc { font-size: 14px !important; padding-left: 22px; }
     .col-card .steps-list { gap: 16px; padding-top: 0; }
 
+    /* ALTERNATING SECTION BANDS */
+    .section-band {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      margin-left: -50vw;
+      padding: 64px 0;
+      margin-bottom: 0;
+    }
+    .section-band.mid { background: #0B0F15; }
+    .section-band-inner {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
     footer {
       position: relative; z-index: 1;
       text-align: center;
@@ -336,6 +355,13 @@
       .cal-section { padding: 0 16px 60px; }
     }
   </style>
+  <!-- Cal element-click embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "llamada-de-estrategia", {origin:"https://app.cal.com"});
+    Cal.ns["llamada-de-estrategia"]("ui", {"theme":"dark","cssVarsPerTheme":{"dark":{"cal-brand":"#0388d7"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+  <!-- Cal element-click embed code ends -->
 </head>
 <body>
 
@@ -370,7 +396,7 @@
 
   <div class="cta-wrap">
     <p class="cta-pre">Reserva tu Sesión Estratégica y Descubre Qué Está <span>Frenando Tus Ventas</span></p>
-    <a href="#reservar" class="cta-btn">
+    <a href="#reservar" class="cta-btn" data-cal-link="xavigomez/llamada-de-estrategia" data-cal-namespace="llamada-de-estrategia" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'>
       RESERVA TU LLAMADA
       <i class="fas fa-arrow-alt-circle-right"></i>
     </a>
@@ -378,6 +404,11 @@
 
   <div class="divider"></div>
 
+</div><!-- fin .page -->
+
+<!-- BANDA: Qué Obtendrás -->
+<div class="section-band mid">
+  <div class="section-band-inner">
   <div class="what-you-get">
     <p class="section-label">¿Qué Obtendrás en tu Llamada Estratégica?</p>
     <div class="benefits-list">
@@ -399,17 +430,18 @@
       </div>
     </div>
   </div>
-
-  <!-- CTA después de Qué Obtendrás -->
   <div class="cta-repeat">
-    <a href="#reservar" class="cta-btn">
+    <a href="#reservar" class="cta-btn" data-cal-link="xavigomez/llamada-de-estrategia" data-cal-namespace="llamada-de-estrategia" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'>
       RESERVA TU LLAMADA
       <i class="fas fa-arrow-alt-circle-right"></i>
     </a>
   </div>
+  </div>
+</div>
 
-  <div class="divider"></div>
-
+<!-- BANDA: Cómo Funciona + Para Quién Es -->
+<div class="section-band" style="background:var(--bg);">
+  <div class="section-band-inner">
   <div class="two-col-section">
 
     <!-- CÓMO FUNCIONA -->
@@ -461,10 +493,8 @@
   </div>
 
   </div>
-
-  <div class="divider"></div>
-
-</div><!-- fin .page -->
+  </div>
+</div>
 
 <!-- CAL SECTION — ancho propio 1280px -->
 <div class="cal-section" id="reservar">
