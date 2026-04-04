@@ -274,6 +274,30 @@
     }
     .cal-section .section-label { margin-bottom: 36px; }
 
+    /* TWO COLUMN SECTION */
+    .two-col-section {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 48px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.75s;
+      text-align: left;
+    }
+    .col-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+    }
+    .col-card .section-label { font-size: 20px !important; margin-bottom: 20px; }
+    .col-card .hiw-title { font-size: 16px !important; }
+    .col-card .hiw-desc { font-size: 14px !important; padding-left: 22px; }
+    .col-card .steps-list { gap: 16px; padding-top: 0; }
+
     footer {
       position: relative; z-index: 1;
       text-align: center;
@@ -307,6 +331,7 @@
       .cta-wrap { margin-bottom: 40px; }
       .cta-repeat { margin-bottom: 40px; }
       .divider { margin: 0 0 30px; }
+      .two-col-section { grid-template-columns: 1fr; gap: 32px; }
       .cal-section { padding: 0 16px 60px; }
     }
   </style>
@@ -356,49 +381,25 @@
     <p class="section-label">¿Qué Obtendrás en tu Llamada Estratégica?</p>
     <div class="benefits-list">
       <div class="benefit-item">
-        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="4.5"><polyline points="20 6 9 17 4 12"/></svg>
         <span class="benefit-text"><strong>Diagnóstico de tu canal</strong> — identificamos exactamente dónde se rompe el recorrido del visitante hacia el cliente.</span>
       </div>
       <div class="benefit-item">
-        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="4.5"><polyline points="20 6 9 17 4 12"/></svg>
         <span class="benefit-text"><strong>El primer cambio concreto</strong> — una acción específica que puedes implementar esta semana para mejorar la conversión.</span>
       </div>
       <div class="benefit-item">
-        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="4.5"><polyline points="20 6 9 17 4 12"/></svg>
         <span class="benefit-text"><strong>Claridad sobre qué funciona</strong> — basado en patrones observados en canales del mismo sector y audiencia similar.</span>
       </div>
       <div class="benefit-item">
-        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="4.5"><polyline points="20 6 9 17 4 12"/></svg>
         <span class="benefit-text"><strong>Grabación y resumen</strong> — recibes la grabación completa y los puntos clave para que puedas actuar de inmediato.</span>
       </div>
     </div>
   </div>
 
-  <div class="divider"></div>
-
-  <div class="how-it-works">
-    <p class="section-label">Cómo Funciona:</p>
-    <div class="steps-list">
-      <div class="hiw-item">
-        <div class="hiw-title"><span class="hiw-number">1.</span> Reserva tu Sesión</div>
-        <div class="hiw-desc">Elige el horario que mejor te venga usando el calendario de abajo.</div>
-      </div>
-      <div class="hiw-item">
-        <div class="hiw-title"><span class="hiw-number">2.</span> Rellena un Formulario Rápido</div>
-        <div class="hiw-desc">Comparte el enlace a tu canal, tus objetivos y en qué quieres centrarte. Así llego preparado y aprovechamos cada minuto.</div>
-      </div>
-      <div class="hiw-item">
-        <div class="hiw-title"><span class="hiw-number">3.</span> Nos Reunimos por Zoom (30 Minutos)</div>
-        <div class="hiw-desc">Analizamos tu canal, revisamos tu estrategia e identificamos los cambios que más impacto van a tener en tu conversión.</div>
-      </div>
-      <div class="hiw-item">
-        <div class="hiw-title"><span class="hiw-number">4.</span> Recibes la Grabación y las Conclusiones</div>
-        <div class="hiw-desc">Te envío la grabación de la sesión y un resumen de los puntos clave para que puedas actuar de inmediato.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA repetido después de Cómo Funciona -->
+  <!-- CTA después de Qué Obtendrás -->
   <div class="cta-repeat">
     <a href="#reservar" class="cta-btn">
       RESERVA TU LLAMADA
@@ -408,38 +409,57 @@
 
   <div class="divider"></div>
 
-  <div class="for-who">
-    <div class="for-card for-yes">
-      <div class="for-header">
-        <div class="for-icon for-icon-yes">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <div class="two-col-section">
+
+    <!-- CÓMO FUNCIONA -->
+    <div class="col-card">
+      <p class="section-label">Cómo Funciona:</p>
+      <div class="steps-list">
+        <div class="hiw-item">
+          <div class="hiw-title"><span class="hiw-number">1.</span> Reserva tu Sesión</div>
+          <div class="hiw-desc">Elige el horario que mejor te venga usando el calendario de abajo.</div>
         </div>
-        <div class="for-title">Esto es para ti si:</div>
-      </div>
-      <ul class="for-list">
-        <li><span class="for-check">✓</span>Eres consultor, coach o formador y vendes tu expertise</li>
-        <li><span class="for-check">✓</span>Ofreces servicios profesionales o productos de alto valor</li>
-        <li><span class="for-check">✓</span>Tienes un negocio real y quieres que YouTube trabaje para él</li>
-        <li><span class="for-check">✓</span>Publicas contenido pero no ves la conexión con tus clientes</li>
-        <li><span class="for-check">✓</span>Quieres un canal que convierta, no solo que acumule vistas</li>
-      </ul>
-    </div>
-    <div class="for-card for-no">
-      <div class="for-header">
-        <div class="for-icon for-icon-no">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <div class="hiw-item">
+          <div class="hiw-title"><span class="hiw-number">2.</span> Rellena un Formulario Rápido</div>
+          <div class="hiw-desc">Comparte el enlace a tu canal, tus objetivos y en qué quieres centrarte. Así llego preparado y aprovechamos cada minuto.</div>
         </div>
-        <div class="for-title">No es para ti si:</div>
+        <div class="hiw-item">
+          <div class="hiw-title"><span class="hiw-number">3.</span> Nos Reunimos por Zoom (30 Minutos)</div>
+          <div class="hiw-desc">Analizamos tu canal, revisamos tu estrategia e identificamos los cambios que más impacto van a tener en tu conversión.</div>
+        </div>
+        <div class="hiw-item">
+          <div class="hiw-title"><span class="hiw-number">4.</span> Recibes la Grabación y las Conclusiones</div>
+          <div class="hiw-desc">Te envío la grabación de la sesión y un resumen de los puntos clave para que puedas actuar de inmediato.</div>
+        </div>
       </div>
-      <ul class="for-list">
-        <li><span class="for-x">✕</span>Haces vlogs, entretenimiento, gaming o contenido de reacción</li>
-        <li><span class="for-x">✕</span>Tu objetivo principal es crecer en seguidores o hacerte viral</li>
-        <li><span class="for-x">✕</span>No tienes un negocio o servicio detrás del canal</li>
-      </ul>
     </div>
+
+    <!-- PARA QUIÉN ES -->
+    <div class="col-card">
+      <p class="section-label">¿Es para ti?</p>
+      <div class="steps-list">
+        <div class="hiw-item">
+          <div class="hiw-title"><span class="hiw-number" style="color:var(--blue)">✓</span> Consultores, coaches y formadores</div>
+          <div class="hiw-desc">Que venden su expertise y quieren que YouTube trabaje para su negocio.</div>
+        </div>
+        <div class="hiw-item">
+          <div class="hiw-title"><span class="hiw-number" style="color:var(--blue)">✓</span> Servicios o productos de alto valor</div>
+          <div class="hiw-desc">Donde cada cliente cuenta y el contenido debe convertir, no solo acumular vistas.</div>
+        </div>
+        <div class="hiw-item">
+          <div class="hiw-title"><span class="hiw-number" style="color:var(--blue)">✓</span> Canal activo pero sin clientes</div>
+          <div class="hiw-desc">Publicas pero no ves la conexión entre el contenido y los resultados de negocio.</div>
+        </div>
+        <div class="hiw-item">
+          <div class="hiw-title"><span class="hiw-number" style="color:#e53e3e;opacity:1;">✕</span> <span style="color:var(--text-muted);font-weight:400;">No para vloggers ni entretenimiento</span></div>
+          <div class="hiw-desc">Ni para quienes buscan seguidores o viralizarse sin un negocio detrás.</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-
+  </div>
 
   <div class="divider"></div>
 
