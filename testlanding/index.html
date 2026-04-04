@@ -44,7 +44,6 @@
       z-index: 0;
     }
 
-    /* PAGE */
     .page {
       position: relative;
       z-index: 1;
@@ -57,7 +56,6 @@
       text-align: center;
     }
 
-    /* BADGE */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -75,7 +73,6 @@
       animation: fadeUp 0.6s ease forwards 0.1s;
     }
 
-    /* HEADLINE */
     h1 {
       font-weight: 800;
       font-size: 72px;
@@ -101,7 +98,6 @@
       animation: fadeUp 0.8s ease forwards 0.35s;
     }
 
-    /* VIDEO */
     .video-wrap {
       width: 100%;
       margin-bottom: 40px;
@@ -148,7 +144,6 @@
     .play-btn svg { margin-left: 3px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3)); }
     .video-label { position: relative; z-index: 2; font-size: 13px; color: var(--text-muted); font-weight: 300; }
 
-    /* CTA BUTTON */
     .cta-wrap {
       width: 100%;
       display: flex;
@@ -175,14 +170,12 @@
       cursor: pointer;
       text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0;
       transition: opacity 0.2s, transform 0.2s;
       box-shadow: 0 8px 30px rgba(3,136,215,0.35);
     }
     .cta-btn:hover { opacity: 0.92; transform: translateY(-2px); }
-    .cta-sub { font-size: 13px; color: var(--text-muted); font-weight: 300; }
 
-    /* DIVIDER */
     .divider {
       width: 100%;
       height: 1px;
@@ -190,7 +183,6 @@
       margin: 0 0 64px;
     }
 
-    /* SECTION LABEL */
     .section-label {
       font-size: clamp(20px, 3vw, 28px);
       font-weight: 800;
@@ -199,7 +191,6 @@
       color: var(--white);
       margin-bottom: 36px;
     }
-    .section-label span { color: var(--blue); }
 
     /* WHAT YOU GET */
     .what-you-get {
@@ -208,33 +199,32 @@
       opacity: 0;
       animation: fadeUp 0.8s ease forwards 0.65s;
     }
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-    .benefit-item {
-      padding: 8px 16px;
-      text-align: center;
+    .benefits-list {
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      align-items: center;
+      gap: 20px;
+      text-align: left;
     }
-    .benefit-title {
-      font-size: 28px;
-      font-weight: 700;
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .benefit-check {
       color: var(--blue);
-      line-height: 1.3;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      text-decoration-thickness: 2px;
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
-    .benefit-desc {
-      font-size: 16px;
+    .benefit-text {
+      font-size: 18px;
       color: var(--text-muted);
       font-weight: 300;
       line-height: 1.4;
+    }
+    .benefit-text strong {
+      color: var(--white);
+      font-weight: 700;
     }
 
     /* HOW IT WORKS */
@@ -249,7 +239,6 @@
       flex-direction: column;
       gap: 28px;
       padding-top: 20px;
-      
     }
     .hiw-item {
       display: flex;
@@ -265,23 +254,9 @@
       line-height: 1.1;
       min-width: 36px;
     }
-    .hiw-content {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .hiw-title {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.2;
-    }
-    .hiw-desc {
-      font-size: 16px;
-      color: var(--text-muted);
-      font-weight: 300;
-      line-height: 1.4;
-    }
+    .hiw-content { display: flex; flex-direction: column; gap: 6px; }
+    .hiw-title { font-size: 22px; font-weight: 700; color: var(--white); line-height: 1.2; }
+    .hiw-desc { font-size: 16px; color: var(--text-muted); font-weight: 300; line-height: 1.4; }
 
     /* FOR WHO */
     .for-who {
@@ -293,13 +268,7 @@
       opacity: 0;
       animation: fadeUp 0.8s ease forwards 0.85s;
     }
-    .for-card {
-      border-radius: 14px;
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+    .for-card { border-radius: 14px; padding: 32px 28px; display: flex; flex-direction: column; gap: 24px; }
     .for-yes { background: var(--bg-card); border: 1px solid rgba(3,136,215,0.25); }
     .for-no { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); }
     .for-header { display: flex; align-items: center; gap: 12px; }
@@ -313,14 +282,9 @@
     .for-x { color: var(--text-muted); font-weight: 700; flex-shrink: 0; margin-top: 1px; opacity: 0.5; }
 
     /* CALENDLY */
-    .calendly-wrap {
-      width: 100%;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.95s;
-    }
+    .calendly-wrap { width: 100%; opacity: 0; animation: fadeUp 0.8s ease forwards 0.95s; }
     .calendly-inline-widget iframe { overflow: hidden !important; }
 
-    /* FOOTER */
     footer {
       position: relative; z-index: 1;
       text-align: center;
@@ -344,10 +308,7 @@
       .badge { font-size: 12px; padding: 5px 4px; letter-spacing: 0.04em; }
       .hero-sub { font-size: 16px; }
       .section-label { font-size: 28px !important; margin-bottom: 20px; }
-      .benefits-grid { grid-template-columns: 1fr; gap: 8px; }
-      .benefit-item { padding: 12px 8px; }
-      .benefit-title { font-size: 22px !important; }
-      .benefit-desc { font-size: 15px !important; }
+      .benefit-text { font-size: 16px !important; }
       .hiw-title { font-size: 18px !important; }
       .hiw-desc { font-size: 15px !important; }
       .for-who { grid-template-columns: 1fr; }
@@ -364,26 +325,16 @@
 
 <div class="page">
 
-  <!-- BADGE -->
   <div class="badge">Para Consultores, Coaches y Profesionales</div>
 
-  <!-- TÍTULO -->
   <h1>Convierte tu Canal de YouTube en un <em>Sistema</em> para <em>Atraer Clientes</em></h1>
 
-  <!-- SUBTÍTULO -->
   <p class="hero-sub">
     Detectamos qué está frenando tu canal y cómo corregirlo para que dejes de publicar a ciegas.
   </p>
 
-  <!-- VÍDEO -->
   <div class="video-wrap">
     <div class="video-border">
-      <!--
-        ACTIVAR VÍDEO:
-        1. Borra div.video-placeholder
-        2. Descomenta el iframe
-        3. Cambia TU_VIDEO_ID
-      -->
       <div class="video-placeholder">
         <div class="play-btn">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
@@ -399,34 +350,35 @@
     </div>
   </div>
 
-  <!-- CTA BOTÓN -->
   <div class="cta-wrap">
-    <a href="#reservar" class="cta-btn">RESERVA TU LLAMADA<i class="fas fa-arrow-alt-circle-right"></i></a>
+    <a href="#reservar" class="cta-btn">RESERVA TU LLAMADA <i class="fas fa-arrow-alt-circle-right"></i></a>
   </div>
 
-  <!-- DIVIDER -->
   <div class="divider"></div>
 
   <!-- QUÉ OBTENDRÁS -->
   <div class="what-you-get">
     <p class="section-label">¿Qué Obtendrás en tu Llamada Estratégica?</p>
-    <div class="benefits-grid">
+    <div class="benefits-list">
       <div class="benefit-item">
-        <div class="benefit-title">Diagnóstico de tu Canal</div>
-        <div class="benefit-desc">Identificamos exactamente dónde se rompe el recorrido del visitante hacia el cliente.</div>
+        <span class="benefit-check">✓</span>
+        <span class="benefit-text"><strong>Diagnóstico de tu canal</strong> — identificamos exactamente dónde se rompe el recorrido del visitante hacia el cliente.</span>
       </div>
       <div class="benefit-item">
-        <div class="benefit-title">El Primer Cambio Concreto</div>
-        <div class="benefit-desc">Una acción específica que puedes implementar esta semana para mejorar la conversión.</div>
+        <span class="benefit-check">✓</span>
+        <span class="benefit-text"><strong>El primer cambio concreto</strong> — una acción específica que puedes implementar esta semana para mejorar la conversión.</span>
       </div>
       <div class="benefit-item">
-        <div class="benefit-title">Claridad sobre qué Funciona</div>
-        <div class="benefit-desc">Basado en patrones observados en canales del mismo sector y audiencia similar.</div>
+        <span class="benefit-check">✓</span>
+        <span class="benefit-text"><strong>Claridad sobre qué funciona</strong> — basado en patrones observados en canales del mismo sector y audiencia similar.</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-check">✓</span>
+        <span class="benefit-text"><strong>Grabación y resumen</strong> — recibes la grabación completa y los puntos clave para que puedas actuar de inmediato.</span>
       </div>
     </div>
   </div>
 
-  <!-- DIVIDER -->
   <div class="divider"></div>
 
   <!-- CÓMO FUNCIONA -->
@@ -464,7 +416,6 @@
     </div>
   </div>
 
-  <!-- DIVIDER -->
   <div class="divider"></div>
 
   <!-- PARA QUIÉN ES -->
@@ -499,7 +450,6 @@
     </div>
   </div>
 
-  <!-- DIVIDER -->
   <div class="divider"></div>
 
   <!-- CALENDLY -->
@@ -513,7 +463,6 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2025 Xavi Gómez · <a href="/newsletter">Newsletter</a> · <a href="#">Política de privacidad</a></p>
 </footer>
