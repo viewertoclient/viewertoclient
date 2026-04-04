@@ -217,7 +217,6 @@
       margin-top: 3px;
       width: 20px;
       text-align: center;
-      font-weight: 700;
     }
     .benefit-text {
       font-size: 18px;
@@ -240,26 +239,27 @@
     .steps-list {
       display: flex;
       flex-direction: column;
-      gap: 28px;
+      gap: 20px;
       padding-top: 20px;
+      text-align: left;
     }
     .hiw-item {
       display: flex;
-      align-items: flex-start;
-      gap: 0px;
-      text-align: left;
+      flex-direction: column;
+      gap: 4px;
     }
-    .hiw-number {
-      font-weight: 800;
-      font-size: 28px;
+    .hiw-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+    }
+    .hiw-title .hiw-number {
       color: var(--blue);
-      flex-shrink: 0;
-      line-height: 1.1;
-      min-width: 36px;
+      font-weight: 800;
+      margin-right: 6px;
     }
-    .hiw-content { display: flex; flex-direction: column; gap: 6px; }
-    .hiw-title { font-size: 22px; font-weight: 700; color: var(--white); line-height: 1.2; }
-    .hiw-desc { font-size: 16px; color: var(--text-muted); font-weight: 300; line-height: 1.4; }
+    .hiw-desc { font-size: 16px; color: var(--text-muted); font-weight: 300; line-height: 1.4; padding-left: 28px; }
 
     /* FOR WHO */
     .for-who {
@@ -389,32 +389,20 @@
     <p class="section-label">Cómo Funciona:</p>
     <div class="steps-list">
       <div class="hiw-item">
-        <div class="hiw-number">1.</div>
-        <div class="hiw-content">
-          <div class="hiw-title">Reserva tu Sesión</div>
-          <div class="hiw-desc">Elige el horario que mejor te venga usando el calendario de abajo.</div>
-        </div>
+        <div class="hiw-title"><span class="hiw-number">1.</span> Reserva tu Sesión</div>
+        <div class="hiw-desc">Elige el horario que mejor te venga usando el calendario de abajo.</div>
       </div>
       <div class="hiw-item">
-        <div class="hiw-number">2.</div>
-        <div class="hiw-content">
-          <div class="hiw-title">Rellena un Formulario Rápido</div>
-          <div class="hiw-desc">Comparte el enlace a tu canal, tus objetivos y en qué quieres centrarte. Así llego preparado y aprovechamos cada minuto.</div>
-        </div>
+        <div class="hiw-title"><span class="hiw-number">2.</span> Rellena un Formulario Rápido</div>
+        <div class="hiw-desc">Comparte el enlace a tu canal, tus objetivos y en qué quieres centrarte. Así llego preparado y aprovechamos cada minuto.</div>
       </div>
       <div class="hiw-item">
-        <div class="hiw-number">3.</div>
-        <div class="hiw-content">
-          <div class="hiw-title">Nos Reunimos por Zoom (30 Minutos)</div>
-          <div class="hiw-desc">Analizamos tu canal, revisamos tu estrategia e identificamos los cambios que más impacto van a tener en tu conversión.</div>
-        </div>
+        <div class="hiw-title"><span class="hiw-number">3.</span> Nos Reunimos por Zoom (30 Minutos)</div>
+        <div class="hiw-desc">Analizamos tu canal, revisamos tu estrategia e identificamos los cambios que más impacto van a tener en tu conversión.</div>
       </div>
       <div class="hiw-item">
-        <div class="hiw-number">4.</div>
-        <div class="hiw-content">
-          <div class="hiw-title">Recibes la Grabación y las Conclusiones</div>
-          <div class="hiw-desc">Te envío la grabación de la sesión y un resumen de los puntos clave para que puedas actuar de inmediato.</div>
-        </div>
+        <div class="hiw-title"><span class="hiw-number">4.</span> Recibes la Grabación y las Conclusiones</div>
+        <div class="hiw-desc">Te envío la grabación de la sesión y un resumen de los puntos clave para que puedas actuar de inmediato.</div>
       </div>
     </div>
   </div>
