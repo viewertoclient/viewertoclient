@@ -186,6 +186,14 @@
     .cta-btn:hover { opacity: 0.92; transform: translateY(-2px); }
     .cta-btn svg { flex-shrink: 0; }
 
+    /* CTA repetido — sin animación, sin pre-text */
+    .cta-repeat {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 72px;
+    }
+
     .divider {
       width: 100%;
       height: 1px;
@@ -214,33 +222,18 @@
       gap: 20px;
       text-align: left;
     }
-    .benefit-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
+    .benefit-item { display: flex; align-items: flex-start; gap: 8px; }
     .benefit-check { flex-shrink: 0; margin-top: 2px; }
-    .benefit-text {
-      font-size: 18px;
-      color: var(--text-muted);
-      font-weight: 300;
-      line-height: 1.4;
-    }
+    .benefit-text { font-size: 18px; color: var(--text-muted); font-weight: 300; line-height: 1.4; }
     .benefit-text strong { color: var(--white); font-weight: 700; }
 
     .how-it-works {
       width: 100%;
-      margin-bottom: 72px;
+      margin-bottom: 40px;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards 0.75s;
     }
-    .steps-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding-top: 20px;
-      text-align: left;
-    }
+    .steps-list { display: flex; flex-direction: column; gap: 20px; padding-top: 20px; text-align: left; }
     .hiw-item { display: flex; flex-direction: column; gap: 4px; }
     .hiw-title { font-size: 22px; font-weight: 700; color: var(--white); line-height: 1.3; }
     .hiw-title .hiw-number { color: var(--blue); font-weight: 800; margin-right: 6px; }
@@ -251,7 +244,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      margin-bottom: 72px;
+      margin-bottom: 40px;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards 0.85s;
     }
@@ -268,7 +261,6 @@
     .for-check { color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
     .for-x { color: var(--text-muted); font-weight: 700; flex-shrink: 0; margin-top: 1px; opacity: 0.5; }
 
-    /* CAL SECTION — ancho propio fuera del .page */
     .cal-section {
       position: relative;
       z-index: 1;
@@ -313,6 +305,7 @@
       .for-list li { font-size: 15px !important; }
       .cta-btn { font-size: 16px; padding: 10px 10px; gap: 10px; width: 80%; }
       .cta-wrap { margin-bottom: 40px; }
+      .cta-repeat { margin-bottom: 40px; }
       .divider { margin: 0 0 30px; }
       .cal-section { padding: 0 16px 60px; }
     }
@@ -405,6 +398,14 @@
     </div>
   </div>
 
+  <!-- CTA repetido después de Cómo Funciona -->
+  <div class="cta-repeat">
+    <a href="#reservar" class="cta-btn">
+      RESERVA TU LLAMADA
+      <i class="fas fa-arrow-alt-circle-right"></i>
+    </a>
+  </div>
+
   <div class="divider"></div>
 
   <div class="for-who">
@@ -436,6 +437,14 @@
         <li><span class="for-x">✕</span>No tienes un negocio o servicio detrás del canal</li>
       </ul>
     </div>
+  </div>
+
+  <!-- CTA repetido después de Para Quién Es -->
+  <div class="cta-repeat">
+    <a href="#reservar" class="cta-btn">
+      RESERVA TU LLAMADA
+      <i class="fas fa-arrow-alt-circle-right"></i>
+    </a>
   </div>
 
   <div class="divider"></div>
