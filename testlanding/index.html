@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     :root {
       --blue: #0388D7;
@@ -93,7 +92,7 @@
       max-width: 720px;
       line-height: 1.4;
       font-weight: 300;
-      margin-bottom: 48px;
+      margin-bottom: 20px;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards 0.35s;
     }
@@ -167,7 +166,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 14px;
+      gap: 12px;
       background: var(--blue);
       color: white;
       border: none;
@@ -184,6 +183,7 @@
       box-shadow: 0 8px 30px rgba(3,136,215,0.35);
     }
     .cta-btn:hover { opacity: 0.92; transform: translateY(-2px); }
+    .cta-btn svg { flex-shrink: 0; }
 
     .divider {
       width: 100%;
@@ -216,16 +216,11 @@
     .benefit-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
+      gap: 12px;
     }
     .benefit-check {
-      color: var(--blue);
-      font-size: 18px;
       flex-shrink: 0;
       margin-top: 3px;
-      width: 20px;
-      text-align: center;
-      font-weight: 400;
     }
     .benefit-text {
       font-size: 18px;
@@ -362,7 +357,10 @@
 
   <div class="cta-wrap">
     <p class="cta-pre">Reserva tu Sesión Estratégica y Descubre Qué Está <span>Frenando Tus Ventas</span></p>
-    <a href="#reservar" class="cta-btn">RESERVA TU LLAMADA <i class="fas fa-arrow-alt-circle-right"></i></a>
+    <a href="#reservar" class="cta-btn">
+      RESERVA TU LLAMADA
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8l6 4-6 4z"/></svg>
+    </a>
   </div>
 
   <div class="divider"></div>
@@ -371,19 +369,19 @@
     <p class="section-label">¿Qué Obtendrás en tu Llamada Estratégica?</p>
     <div class="benefits-list">
       <div class="benefit-item">
-        <i class="fas fa-fw fa-check benefit-check"></i>
+        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
         <span class="benefit-text"><strong>Diagnóstico de tu canal</strong> — identificamos exactamente dónde se rompe el recorrido del visitante hacia el cliente.</span>
       </div>
       <div class="benefit-item">
-        <i class="fas fa-fw fa-check benefit-check"></i>
+        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
         <span class="benefit-text"><strong>El primer cambio concreto</strong> — una acción específica que puedes implementar esta semana para mejorar la conversión.</span>
       </div>
       <div class="benefit-item">
-        <i class="fas fa-fw fa-check benefit-check"></i>
+        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
         <span class="benefit-text"><strong>Claridad sobre qué funciona</strong> — basado en patrones observados en canales del mismo sector y audiencia similar.</span>
       </div>
       <div class="benefit-item">
-        <i class="fas fa-fw fa-check benefit-check"></i>
+        <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0388D7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
         <span class="benefit-text"><strong>Grabación y resumen</strong> — recibes la grabación completa y los puntos clave para que puedas actuar de inmediato.</span>
       </div>
     </div>
