@@ -149,11 +149,20 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
       margin-bottom: 80px;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards 0.55s;
     }
+    .cta-pre {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.3;
+      max-width: 600px;
+    }
+    .cta-pre span { color: var(--blue); }
+
     .cta-btn {
       display: inline-flex;
       align-items: center;
@@ -192,7 +201,6 @@
       margin-bottom: 36px;
     }
 
-    /* WHAT YOU GET */
     .what-you-get {
       width: 100%;
       margin-bottom: 72px;
@@ -217,6 +225,7 @@
       margin-top: 3px;
       width: 20px;
       text-align: center;
+      font-weight: 400;
     }
     .benefit-text {
       font-size: 18px;
@@ -229,7 +238,6 @@
       font-weight: 700;
     }
 
-    /* HOW IT WORKS */
     .how-it-works {
       width: 100%;
       margin-bottom: 72px;
@@ -261,7 +269,6 @@
     }
     .hiw-desc { font-size: 16px; color: var(--text-muted); font-weight: 300; line-height: 1.4; padding-left: 28px; }
 
-    /* FOR WHO */
     .for-who {
       width: 100%;
       display: grid;
@@ -284,7 +291,6 @@
     .for-check { color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
     .for-x { color: var(--text-muted); font-weight: 700; flex-shrink: 0; margin-top: 1px; opacity: 0.5; }
 
-    /* CALENDLY */
     .calendly-wrap { width: 100%; opacity: 0; animation: fadeUp 0.8s ease forwards 0.95s; }
     .calendly-inline-widget iframe { overflow: hidden !important; }
 
@@ -310,6 +316,7 @@
       h1 { font-size: 36px; }
       .badge { font-size: 12px; padding: 5px 4px; letter-spacing: 0.04em; }
       .hero-sub { font-size: 16px; }
+      .cta-pre { font-size: 18px !important; }
       .section-label { font-size: 28px !important; margin-bottom: 20px; }
       .benefit-text { font-size: 16px !important; }
       .hiw-title { font-size: 18px !important; }
@@ -354,29 +361,29 @@
   </div>
 
   <div class="cta-wrap">
+    <p class="cta-pre">Reserva tu sesión estratégica y descubre qué está frenando tus <span>ventas</span></p>
     <a href="#reservar" class="cta-btn">RESERVA TU LLAMADA <i class="fas fa-arrow-alt-circle-right"></i></a>
   </div>
 
   <div class="divider"></div>
 
-  <!-- QUÉ OBTENDRÁS -->
   <div class="what-you-get">
     <p class="section-label">¿Qué Obtendrás en tu Llamada Estratégica?</p>
     <div class="benefits-list">
       <div class="benefit-item">
-        <i class="fa fa-fw fa-check benefit-check"></i>
+        <i class="far fa-fw fa-check benefit-check"></i>
         <span class="benefit-text"><strong>Diagnóstico de tu canal</strong> — identificamos exactamente dónde se rompe el recorrido del visitante hacia el cliente.</span>
       </div>
       <div class="benefit-item">
-        <i class="fa fa-fw fa-check benefit-check"></i>
+        <i class="far fa-fw fa-check benefit-check"></i>
         <span class="benefit-text"><strong>El primer cambio concreto</strong> — una acción específica que puedes implementar esta semana para mejorar la conversión.</span>
       </div>
       <div class="benefit-item">
-        <i class="fa fa-fw fa-check benefit-check"></i>
+        <i class="far fa-fw fa-check benefit-check"></i>
         <span class="benefit-text"><strong>Claridad sobre qué funciona</strong> — basado en patrones observados en canales del mismo sector y audiencia similar.</span>
       </div>
       <div class="benefit-item">
-        <i class="fa fa-fw fa-check benefit-check"></i>
+        <i class="far fa-fw fa-check benefit-check"></i>
         <span class="benefit-text"><strong>Grabación y resumen</strong> — recibes la grabación completa y los puntos clave para que puedas actuar de inmediato.</span>
       </div>
     </div>
@@ -384,7 +391,6 @@
 
   <div class="divider"></div>
 
-  <!-- CÓMO FUNCIONA -->
   <div class="how-it-works">
     <p class="section-label">Cómo Funciona:</p>
     <div class="steps-list">
@@ -409,7 +415,6 @@
 
   <div class="divider"></div>
 
-  <!-- PARA QUIÉN ES -->
   <div class="for-who">
     <div class="for-card for-yes">
       <div class="for-header">
@@ -443,7 +448,6 @@
 
   <div class="divider"></div>
 
-  <!-- CALENDLY -->
   <div class="calendly-wrap" id="reservar">
     <p class="section-label">Reserva tu Llamada</p>
     <div class="calendly-inline-widget"
