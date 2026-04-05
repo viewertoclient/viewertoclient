@@ -182,7 +182,7 @@
       text-transform: uppercase;
       letter-spacing: 0;
       transition: opacity 0.2s, transform 0.2s;
-      box-shadow: 0 8px 30px rgba(3,136,215,0.35);
+     
     }
     .cta-btn:hover { opacity: 0.92; transform: translateY(-2px); }
     .cta-btn svg { flex-shrink: 0; }
@@ -417,6 +417,27 @@
       .faq-section { padding: 40px 24px; }
       .faq-q { padding: 10px 28px; }
     }
+
+    .hero-eyebrow {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.2s;
+}
+.hero-title em { font-style: normal; color: #3b82f6; }
   </style>
   <!-- Cal element-click embed code begins -->
   <script type="text/javascript">
@@ -434,8 +455,8 @@
 
   <div class="badge">Para Consultores, Coaches y Profesionales</div>
 
-<p style="font-size: 20px; font-weight: 400;">¿Publicas Sin Conseguir Clientes?</p>
-<h1>Es Hora De Que YouTube Trabaje Para Tu <em>Negocio</em></h1>
+<p class="hero-eyebrow">¿Publicas y No Consigues <span style="color: #3b82f6;">Clientes</span>?</p>
+<h1 class="hero-title">Es Hora De Que YouTube Trabaje Para Tu <em>Negocio</em></h1>
 
   <p class="hero-sub">
     Detectamos qué está frenando tu canal y cómo corregirlo para que dejes de publicar a ciegas.
