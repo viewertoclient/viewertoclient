@@ -392,6 +392,26 @@
       from { opacity: 0; transform: translateY(22px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+       .hero-eyebrow {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.2s;
+}
+.hero-title em { font-style: normal; color: #3b82f6; }
 
     @media (max-width: 640px) {
       .page { padding: 20px 20px 0; }
@@ -420,26 +440,6 @@
       .hero-title { font-size: 36px; }
     }
 
-    .hero-eyebrow {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 8px;
-}
-
-.hero-title {
-  font-weight: 800;
-  font-size: 72px;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin-bottom: 20px;
-  max-width: 900px;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards 0.2s;
-}
-.hero-title em { font-style: normal; color: #3b82f6; }
   </style>
   <!-- Cal element-click embed code begins -->
   <script type="text/javascript">
